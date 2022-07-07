@@ -1,0 +1,282 @@
+[
+    {
+      "Salesorderid": "Salesord 1",
+      "Itemposition": "Itemposi 1",
+      "Productid": "Producti 1",
+      "Note": "Note 1",
+      "Notelanguage": " 1",
+      "Currencycode": "Cur 1",
+      "Grossamount": 7555.63,
+      "Netamount": 9799.75,
+      "Taxamount": 5976.94,
+      "Deliverydate": "/Date(1462659143000)/",
+      "Quantity": 3090.44,
+      "Quantityunit": "Q 1",
+      "__metadata": {
+        "uri": "/salesorderitem(Salesorderid='Salesord%201',Itemposition='Itemposi%201')",
+        "type": "cds_zsd_gerensuprimentos_199.salesorderitemType"
+      },
+      "to_product": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%201',Itemposition='Itemposi%201')/to_product"
+        }
+      },
+      "to_salesOrder": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%201',Itemposition='Itemposi%201')/to_salesOrder"
+        }
+      }
+    },
+    {
+      "Salesorderid": "Salesord 2",
+      "Itemposition": "Itemposi 2",
+      "Productid": "Producti 2",
+      "Note": "Note 2",
+      "Notelanguage": " 2",
+      "Currencycode": "Cur 2",
+      "Grossamount": 1297.78,
+      "Netamount": 3101.81,
+      "Taxamount": 9545.37,
+      "Deliverydate": "/Date(1423343543000)/",
+      "Quantity": 4880.84,
+      "Quantityunit": "Q 2",
+      "__metadata": {
+        "uri": "/salesorderitem(Salesorderid='Salesord%202',Itemposition='Itemposi%202')",
+        "type": "cds_zsd_gerensuprimentos_199.salesorderitemType"
+      },
+      "to_product": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%202',Itemposition='Itemposi%202')/to_product"
+        }
+      },
+      "to_salesOrder": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%202',Itemposition='Itemposi%202')/to_salesOrder"
+        }
+      }
+    },
+    {
+      "Salesorderid": "Salesord 3",
+      "Itemposition": "Itemposi 3",
+      "Productid": "Producti 3",
+      "Note": "Note 3",
+      "Notelanguage": " 3",
+      "Currencycode": "Cur 3",
+      "Grossamount": 3507.19,
+      "Netamount": 2537.92,
+      "Taxamount": 5393.82,
+      "Deliverydate": "/Date(1137532343000)/",
+      "Quantity": 4076.01,
+      "Quantityunit": "Q 3",
+      "__metadata": {
+        "uri": "/salesorderitem(Salesorderid='Salesord%203',Itemposition='Itemposi%203')",
+        "type": "cds_zsd_gerensuprimentos_199.salesorderitemType"
+      },
+      "to_product": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%203',Itemposition='Itemposi%203')/to_product"
+        }
+      },
+      "to_salesOrder": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%203',Itemposition='Itemposi%203')/to_salesOrder"
+        }
+      }
+    },
+    {
+      "Salesorderid": "Salesord 4",
+      "Itemposition": "Itemposi 4",
+      "Productid": "Producti 4",
+      "Note": "Note 4",
+      "Notelanguage": " 4",
+      "Currencycode": "Cur 4",
+      "Grossamount": 2192.78,
+      "Netamount": 8733.68,
+      "Taxamount": 9210.64,
+      "Deliverydate": "/Date(1216073543000)/",
+      "Quantity": 2390.42,
+      "Quantityunit": "Q 4",
+      "__metadata": {
+        "uri": "/salesorderitem(Salesorderid='Salesord%204',Itemposition='Itemposi%204')",
+        "type": "cds_zsd_gerensuprimentos_199.salesorderitemType"
+      },
+      "to_product": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%204',Itemposition='Itemposi%204')/to_product"
+        }
+      },
+      "to_salesOrder": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%204',Itemposition='Itemposi%204')/to_salesOrder"
+        }
+      }
+    },
+    {
+      "Salesorderid": "Salesord 5",
+      "Itemposition": "Itemposi 5",
+      "Productid": "Producti 5",
+      "Note": "Note 5",
+      "Notelanguage": " 5",
+      "Currencycode": "Cur 5",
+      "Grossamount": 2606.31,
+      "Netamount": 253.95,
+      "Taxamount": 8644.83,
+      "Deliverydate": "/Date(1505772743000)/",
+      "Quantity": 3876.5,
+      "Quantityunit": "Q 5",
+      "__metadata": {
+        "uri": "/salesorderitem(Salesorderid='Salesord%205',Itemposition='Itemposi%205')",
+        "type": "cds_zsd_gerensuprimentos_199.salesorderitemType"
+      },
+      "to_product": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%205',Itemposition='Itemposi%205')/to_product"
+        }
+      },
+      "to_salesOrder": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%205',Itemposition='Itemposi%205')/to_salesOrder"
+        }
+      }
+    },
+    {
+      "Salesorderid": "Salesord 6",
+      "Itemposition": "Itemposi 6",
+      "Productid": "Producti 6",
+      "Note": "Note 6",
+      "Notelanguage": " 6",
+      "Currencycode": "Cur 6",
+      "Grossamount": 4644.53,
+      "Netamount": 5241.71,
+      "Taxamount": 530.23,
+      "Deliverydate": "/Date(1258751543000)/",
+      "Quantity": 597.52,
+      "Quantityunit": "Q 6",
+      "__metadata": {
+        "uri": "/salesorderitem(Salesorderid='Salesord%206',Itemposition='Itemposi%206')",
+        "type": "cds_zsd_gerensuprimentos_199.salesorderitemType"
+      },
+      "to_product": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%206',Itemposition='Itemposi%206')/to_product"
+        }
+      },
+      "to_salesOrder": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%206',Itemposition='Itemposi%206')/to_salesOrder"
+        }
+      }
+    },
+    {
+      "Salesorderid": "Salesord 7",
+      "Itemposition": "Itemposi 7",
+      "Productid": "Producti 7",
+      "Note": "Note 7",
+      "Notelanguage": " 7",
+      "Currencycode": "Cur 7",
+      "Grossamount": 735.79,
+      "Netamount": 1369.13,
+      "Taxamount": 7452.82,
+      "Deliverydate": "/Date(1165698743000)/",
+      "Quantity": 830.66,
+      "Quantityunit": "Q 7",
+      "__metadata": {
+        "uri": "/salesorderitem(Salesorderid='Salesord%207',Itemposition='Itemposi%207')",
+        "type": "cds_zsd_gerensuprimentos_199.salesorderitemType"
+      },
+      "to_product": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%207',Itemposition='Itemposi%207')/to_product"
+        }
+      },
+      "to_salesOrder": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%207',Itemposition='Itemposi%207')/to_salesOrder"
+        }
+      }
+    },
+    {
+      "Salesorderid": "Salesord 8",
+      "Itemposition": "Itemposi 8",
+      "Productid": "Producti 8",
+      "Note": "Note 8",
+      "Notelanguage": " 8",
+      "Currencycode": "Cur 8",
+      "Grossamount": 9458.29,
+      "Netamount": 361.18,
+      "Taxamount": 7670.07,
+      "Deliverydate": "/Date(1141596743000)/",
+      "Quantity": 1526.14,
+      "Quantityunit": "Q 8",
+      "__metadata": {
+        "uri": "/salesorderitem(Salesorderid='Salesord%208',Itemposition='Itemposi%208')",
+        "type": "cds_zsd_gerensuprimentos_199.salesorderitemType"
+      },
+      "to_product": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%208',Itemposition='Itemposi%208')/to_product"
+        }
+      },
+      "to_salesOrder": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%208',Itemposition='Itemposi%208')/to_salesOrder"
+        }
+      }
+    },
+    {
+      "Salesorderid": "Salesord 9",
+      "Itemposition": "Itemposi 9",
+      "Productid": "Producti 9",
+      "Note": "Note 9",
+      "Notelanguage": " 9",
+      "Currencycode": "Cur 9",
+      "Grossamount": 1407.91,
+      "Netamount": 9453.76,
+      "Taxamount": 3215.49,
+      "Deliverydate": "/Date(1567462343000)/",
+      "Quantity": 488.01,
+      "Quantityunit": "Q 9",
+      "__metadata": {
+        "uri": "/salesorderitem(Salesorderid='Salesord%209',Itemposition='Itemposi%209')",
+        "type": "cds_zsd_gerensuprimentos_199.salesorderitemType"
+      },
+      "to_product": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%209',Itemposition='Itemposi%209')/to_product"
+        }
+      },
+      "to_salesOrder": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesord%209',Itemposition='Itemposi%209')/to_salesOrder"
+        }
+      }
+    },
+    {
+      "Salesorderid": "Salesor 10",
+      "Itemposition": "Itempos 10",
+      "Productid": "Product 10",
+      "Note": "Note 10",
+      "Notelanguage": " 10",
+      "Currencycode": "Cu 10",
+      "Grossamount": 437.51,
+      "Netamount": 2347.95,
+      "Taxamount": 8583.65,
+      "Deliverydate": "/Date(1576447943000)/",
+      "Quantity": 5338.33,
+      "Quantityunit": " 10",
+      "__metadata": {
+        "uri": "/salesorderitem(Salesorderid='Salesor%2010',Itemposition='Itempos%2010')",
+        "type": "cds_zsd_gerensuprimentos_199.salesorderitemType"
+      },
+      "to_product": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesor%2010',Itemposition='Itempos%2010')/to_product"
+        }
+      },
+      "to_salesOrder": {
+        "__deferred": {
+          "uri": "/salesorderitem(Salesorderid='Salesor%2010',Itemposition='Itempos%2010')/to_salesOrder"
+        }
+      }
+    }
+  ]

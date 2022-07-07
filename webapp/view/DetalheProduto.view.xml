@@ -1,0 +1,138 @@
+<mvc:View 
+xmlns:mvc="sap.ui.core.mvc"
+ xmlns:layout="sap.ui.layout" 
+ xmlns="sap.uxap" xmlns:m="sap.m" 
+ controllerName="br.com.supri.fioriappsuprimentos199.controller.DetalheProduto" 
+ displayBlock="true">
+
+	<ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true" showEditHeaderButton="true" editHeaderButtonPress="handleEditBtnPress" upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle id="_IDGenObjectPageDynamicHeaderTitle1">
+				<expandedHeading>
+					<m:HBox id="_IDGenHBox1">
+						<m:Title id="_IDGenTitle1" text="{i18n>titleProduto}: {Productid}- {Name}" wrapping="true"/>
+					</m:HBox>
+				</expandedHeading>
+
+				<snappedHeading>
+					<m:FlexBox id="_IDGenFlexBox1" fitContainer="true" alignItems="Center">
+                        <m:items>
+                            <sap.ui.core:Icon xmlns:sap.ui.core="sap.ui.core" src="sap-icon://product" size="3em" class="sapUiSmallMarginBegin sapUiSmallMarginTopBotton" id="icon0"/>
+                        </m:items>  						
+                        <m:Title id="_IDGenTitle2" text="{i18n>titleProduto}: {Productid}- {Name}" wrapping="true"/>
+					</m:FlexBox>
+				</snappedHeading>
+
+				<expandedContent>
+					<!--<m:Text id="_IDGenText1" text="Senior UI Developer"/>-->
+				</expandedContent>
+
+				<snappedContent>					
+                    <m:Label id="_IDGenText2" text="{i18n>headerFornProd}" class="sapUiTinyMarginEnd"/>
+                    <m:Link id="linkHeaderForn1" text="{Supplierid} - {Suppliername}" press="onDetalheFornecedor"/>
+				</snappedContent>
+				<actions>
+                    <m:Button id="_IDGenButton1" text="{i18n>btnListaProd}" type="Emphasized" press="onListaProduto" icon="sap-icon://list"/>
+                </actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+
+		<headerContent>
+            <m:HeaderContainer id="_IDGenHeaderContainer1" scrollStep="200" showDividers="false">
+
+                <m:HBox id="_IDGenHBox2" class="sapUiSmallMarginEnd sapUiSmallMarginBotton">
+                    <sap.ui.core:Icon xmlns:sap.ui.core="sap.ui.core" src="sap-icon://product" size="4em" class="sapUiMediumMarginEnd sapUiSmallMarginBotton" id="icon1"/>
+
+                       <m:HBox id="_IDGenHBox3" class="sapUiTinyMarginBotton" renderType="Bare">
+                            <m:Label id="_IDGenLabel4" text="{i18n>headerFornProd}" class="sapUiTinyMarginEnd"/>
+                            <m:Link id="linkHeaderForn" text="{Supplierid}" press="onDetalheFornecedor"/> 
+                        </m:HBox>
+
+                </m:HBox>  
+
+                <m:VBox id="_IDGenVBox6" class="sapUiSmallMarginEnd sapUiSmallMarginBotton">
+
+                    <m:HBox id="_IDGenHBox5">
+                        <m:Label id="_IDGenLabel6" text="{i18n>headerCreatedon}" class="sapUiSmallMarginEnd"/>
+                        <m:Link id="_IDGenLink6" text="{ path:'Createdat', formatter:'.objFormatter.date'}"/>
+                    </m:HBox>
+
+                    <m:HBox id="_IDGenHBox7">
+                        <m:Label id="_IDGenLabel8" text="{i18n>headerChangedon}" class="sapUiSmallMarginEnd"/>
+                        <m:Link id="_IDGenLink8" text="{ path:'Changedat', formatter:'.objFormatter.date'}"/>
+                    </m:HBox>
+                    
+                </m:VBox>
+
+            </m:HeaderContainer>
+		</headerContent>
+
+		<sections>
+			<ObjectPageSection id="_IDGenObjectPageSection1" titleUppercase="false" title="{i18n>sectionBasicInformation}">
+				<subSections>
+					<ObjectPageSubSection id="_IDGenObjectPageSubSection1">
+						<blocks>
+							
+						<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" id="form0" class="sapUxAPObjectPageSubSectionAlignContent" editable="false" layout="ColumnLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsM="2" columnsL="3" columnsXL="4" singleContainerFullSize="false">
+							
+						    <sap.ui.layout.form:content>
+							
+						        <m:Label id="_IDGenLabel9" text="{i18n>sfCategoriaProd}"/>
+                                <m:Text id="_IDGenText5" text="{Category}" class="sapMObjectNumberMedium"/>
+							
+						        <m:Label id="_IDGenLabel10" text="{i18n>sfIdiomaPrond}"/>
+                                <m:Text id="_IDGenText6" text="{Namelanguage}" class="sapMObjectNumberMedium"/>
+
+						        <m:Label id="_IDGenLabel11"  text="{i18n>sfUnidadeNedProd}"/>
+                                <m:Text id="_IDGenText7"   text="{Measureunit}" class="sapMObjectNumberMedium"/>							
+						    
+                            </sap.ui.layout.form:content>
+							
+						</sap.ui.layout.form:SimpleForm>
+							
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection id="_IDGenObjectPageSection2" titleUppercase="false" title="{i18n>sectionDadosMoneario}" importance="Medium">
+				<subSections>
+					<ObjectPageSubSection id="_IDGenObjectPageSubSection2" titleUppercase="false">
+					<blocks>
+						<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" id="form1" class="sapUxAPObjectPageSubSectionAlignContent" editable="false" layout="ColumnLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsM="2" columnsL="3" columnsXL="4" singleContainerFullSize="false">
+							
+						    <sap.ui.layout.form:content>
+							
+						        <m:Label id="_IDGenLabel12" text="{i18n>sfMoedaProd}"/>
+                                <m:Text id="_IDGenText8" text="{Currencycode}" class="sapMObjectNumberMedium"/>
+							
+						        <m:Label id="_IDGenLabel13" text="{i18n>sfLarguraProd}"/>
+                                <m:Text id="_IDGenText9" text="{Width}" class="sapMObjectNumberMedium"/>
+
+						        <m:Label id="_IDGenLabel14"  text="{i18n>sfPrecoProd}"/>
+                                <m:Text id="_IDGenText10"   text="{Price}" class="sapMObjectNumberMedium"/>							
+
+						        <m:Label id="_IDGenLabel15" text="{i18n>sfProfProd}"/>
+                                <m:Text id="_IDGenText11" text="{Depth}" class="sapMObjectNumberMedium"/>
+							
+						        <m:Label id="_IDGenLabel16" text="{i18n>sfTaxCodeProd}"/>
+                                <m:Text id="_IDGenText12" text="{Taxtarifcode}" class="sapMObjectNumberMedium"/>
+
+						        <m:Label id="_IDGenLabel17"  text="{i18n>sfAlturaProd}"/>
+                                <m:Text id="_IDGenText13"   text="{Height}" class="sapMObjectNumberMedium"/>	
+
+                            </sap.ui.layout.form:content>
+							
+						</sap.ui.layout.form:SimpleForm>
+												    
+					</blocks>
+					</ObjectPageSubSection>
+
+					
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+		<footer>
+		</footer>
+	</ObjectPageLayout>
+</mvc:View>

@@ -1,0 +1,198 @@
+<mvc:View 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns:layout="sap.ui.layout" 
+xmlns="sap.uxap" xmlns:m="sap.m" 
+controllerName="br.com.supri.fioriappsuprimentos199.controller.DetalheOrdensVendas" 
+displayBlock="true">
+
+	<ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true" showEditHeaderButton="true" editHeaderButtonPress="handleEditBtnPress" upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle id="_IDGenObjectPageDynamicHeaderTitle1">
+				<expandedHeading>
+					<m:HBox id="_IDGenHBox1">
+						<m:Title id="_IDGenTitle1" text="{i18n>titleNumOredm}: {Salesorderid}" wrapping="true"/>
+					</m:HBox>
+				</expandedHeading>
+
+				<snappedHeading>
+					<m:FlexBox id="_IDGenFlexBox1" fitContainer="true" alignItems="Center">	
+                        <m:items>
+                            <sap.ui.core:Icon xmlns:sap.ui.core="sap.ui.core" src="sap-icon://sales-order" size="3em" class="sapUiSmallMarginBegin sapUiSmallMarginTopBotton" id="icon0"/>
+                        </m:items>     
+						<m:Title id="_IDGenTitle2" text="{i18n>titleNumOredm}: {Salesorderid}" wrapping="true"/>
+                        
+					</m:FlexBox>
+				</snappedHeading>
+
+			<!--	<expandedContent>
+					<m:Text id="_IDGenText1" text="{i18n>headerFornecedor} {ToBusinessPartner/BusinessPartnerID}"/>
+				</expandedContent>-->
+
+				<snappedContent>					
+                    <m:Label id="_IDGenText2" text="{i18n>headerFheaderFornProdornecedor}" class="sapUiTinyMarginEnd"/>
+                    <m:Link id="linkHeaderForn1" text="{to_Businesspartners/Businesspartners}" press="onDetalheFornecedor"/>
+				</snappedContent>
+
+				<snappedTitleOnMobile>
+					<m:Title id="_IDGenTitle3" text="{i18n>headerFornecedor} {to_Businesspartners/Businesspartners}"/>
+				</snappedTitleOnMobile>
+
+				<actions>
+					<!--<m:OverflowToolbarButton id="_IDGenOverflowToolbarButton1" icon="sap-icon://edit" text="edit header" type="Emphasized" tooltip="edit">
+						<m:layoutData>
+							<m:OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" priority="NeverOverflow"/>
+						</m:layoutData>
+					</m:OverflowToolbarButton>
+					<m:OverflowToolbarButton id="_IDGenOverflowToolbarButton2" icon="sap-icon://pull-down" text="show section" type="Emphasized" tooltip="pull-down"/>
+					<m:OverflowToolbarButton id="_IDGenOverflowToolbarButton3" icon="sap-icon://show" text="show state" tooltip="show"/>
+					<m:Button id="_IDGenButton1" text="Toggle Footer" press="toggleFooter"/>
+                    <m:Button text="{i18n>btnlistarFornecedor}" id="btnlistarFornecedor" press="listarFornecedor"/>
+                    <m:Button text="{i18n>btnlistarProduto}" id="btnlistarProduto" press="listarProduto"/>-->
+                <m:Button id="_IDGenButton1" text="{i18n>btnBack}" type="Emphasized" press="onNavBack" icon="sap-icon://nav-back"/>
+				</actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+
+		<headerContent>
+
+            <m:HeaderContainer id="_IDGenHeaderContainer1" scrollStep="200" showDividers="false">
+
+                <m:HBox id="_IDGenHBox2" class="sapUiSmallMarginEnd sapUiSmallMarginBotton">
+                    <sap.ui.core:Icon xmlns:sap.ui.core="sap.ui.core" src="sap-icon://sales-order" size="4em" class="sapUiMediumMarginEnd sapUiSmallMarginBotton" id="icon1"/>
+                    <m:VBox id="_IDGenVBox2" class="sapUiSmallMarginBotton">
+                       <!--  <m:Title id="titleHeader"  text="{Productid}" class="sapUiTinyMarginBotton">
+                            
+                        </m:Title>-->
+                        <m:HBox id="_IDGenHBox3" class="sapUiTinyMarginBotton" renderType="Bare">
+                            <m:Label id="_IDGenLabel4" text="{i18n>headerFornecedor}" class="sapUiTinyMarginEnd"/>
+                            <m:Link id="linkHeaderForn" text="{to_Businesspartners/Businesspartners}" press="onDetalheFornecedor"/> 
+                        </m:HBox>
+                    </m:VBox>
+                </m:HBox>
+                <m:VBox id="_IDGenVBox3" class="sapUiSmallMarginEnd sapUiSmallMarginBotton">
+                    <m:Title id="_IDGenTitle4" text="{i18n>headerNote}" class="sapUiTinyMarginBotton"/>
+                    <m:Text id="_IDGenText4" text="{Note}" width="320px"/>
+                </m:VBox>            
+
+                <m:VBox id="_IDGenVBox4" class="sapUiSmallMarginEnd sapUiSmallMarginBotton">
+                    <m:Title id="_IDGenTitle5" text="{i18n>headerStatus}" class="sapUiTinyMarginBotton"/>
+                    <m:ObjectStatus xmlns="sap.m" id="_IDGenObjectStatus1" text="{ path:'Lifecyclestatusdescription', formatter:'.objFormatter.statusProduto'}" state="{ path:'Status', formatter:'.objFormatter.stateProduto'}" icon="{ path:'Status', formatter:'.objFormatter.iconProduto'}" class="sapMObjectStatusLarge"/>
+                </m:VBox>
+
+                <m:VBox id="_IDGenVBox5" class="sapUiSmallMarginEnd sapUiSmallMarginBotton">
+                    <m:Title id="_IDGenTitle6" text="{i18n>headerTotal}" class="sapUiTinyMarginBotton"/>
+                    <m:ObjectNumber xmlns="sap.m" id="_IDGenObjectNumber1" number="{ parts:[ {path:'Grossamount'},{path:'Currencycode'} ], type:'sap.ui.model.type.Currency', formatOptions:{showMeasure: false} }" unit="{Currencycode}" state="Success" class="sapMObjectNumberLarge"/>
+                </m:VBox>
+
+                <m:VBox id="_IDGenVBox6" class="sapUiSmallMarginEnd sapUiSmallMarginBotton">
+
+                    <m:HBox id="_IDGenHBox5">
+                        <m:Label id="_IDGenLabel6" text="{i18n>headerCreatedon}" class="sapUiSmallMarginEnd"/>
+                        <m:Link id="_IDGenLink6" text="{ path:'Createdat', formatter:'.objFormatter.date'}"/>
+                    </m:HBox>
+
+                    <m:HBox id="_IDGenHBox7">
+                        <m:Label id="_IDGenLabel8" text="{i18n>headerChangedon}" class="sapUiSmallMarginEnd"/>
+                        <m:Link id="_IDGenLink8" text="{ path:'Changedat', formatter:'.objFormatter.date'}"/>
+                    </m:HBox>
+                    
+                </m:VBox>
+
+            </m:HeaderContainer>
+
+
+		</headerContent>
+
+		<sections>
+			<ObjectPageSection id="_IDGenObjectPageSection1" titleUppercase="false" title="{i18n>sectionBasicInformation}">
+				<subSections>
+					<ObjectPageSubSection id="_IDGenObjectPageSubSection1">
+						<blocks>
+							
+						<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" id="form0" class="sapUxAPObjectPageSubSectionAlignContent" editable="false" layout="ColumnLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsM="2" columnsL="3" columnsXL="4" singleContainerFullSize="false">
+							
+						    <sap.ui.layout.form:content>
+							
+						        <m:Label id="_IDGenLabel9" text="{i18n>sfCliente}"/>
+                                <m:Text id="_IDGenText5" text="{Customerid}-{Customername}" class="sapMObjectNumberMedium"/>
+							
+						        <m:Label id="_IDGenLabel10" text="{i18n>sfMoeda}"/>
+                                <m:Text id="_IDGenText6" text="{Currencycode}" class="sapMObjectNumberMedium"/>
+
+						        <m:Label id="_IDGenLabel11" text="{i18n>sfStatusCobranca}"/>
+                                <m:Text id="_IDGenText7" text="{Billingstatusdescription}" class="sapMObjectNumberMedium"/>							
+						    
+                            </sap.ui.layout.form:content>
+							
+						</sap.ui.layout.form:SimpleForm>
+							
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection id="_IDGenObjectPageSection2" titleUppercase="false" title="{i18n>sectionItensOrdem}" importance="Medium">
+				<subSections>
+					<ObjectPageSubSection id="_IDGenObjectPageSubSection2" titleUppercase="false">
+					<blocks>
+					    <m:Table noDataText="Drop column list items here and columns in the area above" id="tableItemOrdemVendas" items="{/salesorderitem}">
+					        <m:items>
+					            <m:ColumnListItem press="onSelectedItem" type="Active" id="item2">
+					                <m:cells>
+					                    <m:Text text="{Itemposition}" id="text10"/>
+					                    <m:Text text="{Productid}" id="text11"/>
+					                    <m:Text text="{Quantity}" id="text12"/>
+					                    <m:Text xmlns="sap.m" text="{Netamount}" id="text14"/>
+					                    <m:Text xmlns="sap.m" text="{Taxamount}" id="text16"/>
+					                    <m:Text xmlns="sap.m" text="{Grossamount}" id="text18"/>
+                                    </m:cells>
+					            </m:ColumnListItem>
+					        </m:items>
+					        <m:columns>
+					            <m:Column id="column0">
+					                <m:header>
+					                    <m:Label text="{i18n>lbItemOrdem}" id="label0"/>
+					                </m:header>
+					            </m:Column>
+					            <m:Column id="column1">
+					                <m:header>
+					                    <m:Label text="{i18n>lbIProdutoOrdem}" id="label1"/>
+					                </m:header>
+					            </m:Column>
+					            <m:Column id="column2">
+					                <m:header>
+					                    <m:Label text="{i18n>lbQtdItemOrdem}" id="label2"/>
+					                </m:header>
+					            </m:Column>
+					            <m:Column id="column3">
+					                <m:header>
+					                    <m:Text text="{i18n>ValorItemOrdem}" id="text15"/>
+					                </m:header>
+					            </m:Column>
+					            <m:Column id="column4">
+					                <m:header>
+					                    <m:Text text="{i18n>TaxrItemOrdem}" id="text17"/>
+					                </m:header>
+					            </m:Column>
+					            <m:Column id="column5">
+					                <m:header>
+					                    <m:Text text="{i18n>TotalItemOrdem}" id="text19"/>
+					                </m:header>
+					            </m:Column>
+                            </m:columns></m:Table>
+					</blocks>
+					</ObjectPageSubSection>
+
+					
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+		<footer>
+			<m:OverflowToolbar id="_IDGenOverflowToolbar1">
+				<m:ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+				<m:Button id="_IDGenButton2" type="Accept" text="Accept"/>
+				<m:Button id="_IDGenButton3" type="Reject" text="Reject"/>
+			</m:OverflowToolbar>
+		</footer>
+	</ObjectPageLayout>
+</mvc:View>

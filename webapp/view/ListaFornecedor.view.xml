@@ -1,0 +1,139 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:fb="sap.ui.comp.filterbar" controllerName="br.com.supri.fioriappsuprimentos199.controller.ListaFornecedor" displayBlock="true">
+<App id="_IDGenApp1">
+    <pages>     
+        <Page id="page" title="{i18n>title}">  
+        <content>
+            <SemanticPage xmlns="sap.f.semantic" showFooter="false" id="page0">
+                <titleHeading>
+                    <m:Title xmlns:m="sap.m" text="{i18n>fornDados}" id="title0"/>
+                    
+                </titleHeading>
+                <headerContent>
+                    <m:Text xmlns:m="sap.m" text="Filtro" id="text6"/>
+						<fb:FilterBar id="filterbar" reset="onReset" search="onSearch" useToolbar="false" showGoOnFB="true">
+
+						<fb:filterGroupItems>
+
+						    <fb:FilterGroupItem xmlns:sap.m="sap.m" label="{i18n>lbIdForn}" name="fornid" labelTooltip="ID Fornecedor" visibleInFilterBar="true" groupTitle="Principal" groupName="Principal" id="item0">
+
+						        <fb:control>
+
+						            <sap.m:Input width="100%" placeholder="{i18n>placeIdForn}" id="fornecedorIdInput"/>
+
+						        </fb:control>
+
+						    </fb:FilterGroupItem>
+
+						    <fb:FilterGroupItem xmlns:sap.m="sap.m" label="{i18n>lbNomeForn}" name="fornname" labelTooltip="Filter Item" visibleInFilterBar="true" groupTitle="Principal" groupName="Principal" id="item0_1654820640130">
+
+						        <fb:control>
+
+						            <sap.m:Input width="100%" placeholder="{i18n>placeNomeForn}" id="fornecedorNameInput"/>
+
+						        </fb:control>
+
+						    </fb:FilterGroupItem>
+
+						    <fb:FilterGroupItem xmlns:sap.m="sap.m" label="{i18n>lbCidadeForn}" name="forncidade" labelTooltip="Filter Item" visibleInFilterBar="true" groupTitle="Principal" groupName="Principal" id="item0_1654951259759">
+
+						        <fb:control>
+
+						            <sap.m:Input width="100%" placeholder="{i18n>placeCidadeForn}" id="fornecedorCidadeInput"/>
+
+						        </fb:control>
+
+						    </fb:FilterGroupItem>
+
+						    <fb:FilterGroupItem xmlns:sap.m="sap.m" label="{i18n>lbPaisForn}" name="fornpais" labelTooltip="Filter Item" visibleInFilterBar="true" groupTitle="Principal" groupName="Principal" id="item0_1654951560677">
+
+						        <fb:control>
+
+						            <sap.m:Input width="100%" id="fornecedorPaisInput" placeholder="{i18n>placePaisForn}"/>
+
+						        </fb:control>
+
+						    </fb:FilterGroupItem>
+
+						</fb:filterGroupItems>
+
+						</fb:FilterBar> 
+                </headerContent>
+                <titleMainAction>
+                    
+                    
+                </titleMainAction>
+                <titleCustomTextActions>
+                    
+                    
+                </titleCustomTextActions>
+                <titleCustomIconActions>
+            
+                    
+                </titleCustomIconActions>
+                <content>
+                    <sap.m:Table xmlns:sap.m="sap.m" growing="true" growingThreshold="10" growingScrollToLoad="true" noDataText="{i18n>tbSemDados}" id="tableFornecedor" items="{/businesspartners}">
+                        <sap.m:items>
+                            <sap.m:ColumnListItem press="onSelectedItem" type="Active" id="item1">
+                                <sap.m:cells>
+                                    <sap.m:Text text="{Businesspartners}" id="text11"/>
+                                    <sap.m:Text text="{Companyname}" id="text12"/>
+                                    <sap.m:Text text="{Webaddress}" id="text13"/><Text xmlns="sap.m" text="{Emailaddress}" id="text14"/>
+                                 
+                                    <!--<Text xmlns="sap.m"  text="{PhoneNumber}" id="colunaTelefone"/>-->
+                                    <Text xmlns="sap.m" text="{ path: 'Phonenumber', formatter: '.telefone' }" id="colunaTelefone"/>
+                                    <Text xmlns="sap.m" id="text9" text="{City}"/>                                    
+                                    <Text xmlns="sap.m" text="{Country}" id="colunaPais"/>                                
+                                </sap.m:cells>
+                            </sap.m:ColumnListItem>
+                        </sap.m:items>
+                        <sap.m:columns>
+                            <sap.m:Column id="column3">
+                                <sap.m:header>
+                                    <sap.m:Label text="{i18n>tbIForn}" id="label3"/>  
+                                </sap.m:header>
+                            </sap.m:Column>
+                            <sap.m:Column id="column4">
+                                <sap.m:header>
+                                    <sap.m:Label text="{i18n>tbNome}" id="label4"/>
+                                </sap.m:header>
+                            </sap.m:Column>
+                            <sap.m:Column id="column5">
+                                <sap.m:header>
+                                    <sap.m:Label text="{i18n>tbSite}" id="label5"/>
+                                </sap.m:header>
+                            </sap.m:Column>
+                            <sap.m:Column id="column6">
+                                <sap.m:header>
+                                    <sap.m:Text text="{i18n>tbemail}" id="text16"/>
+                                </sap.m:header>
+                            </sap.m:Column>
+                            <sap.m:Column id="column7">
+                                <sap.m:header>
+                                    <sap.m:Text text="{i18n>tbtel}" id="text17"/>
+                                </sap.m:header>
+                            </sap.m:Column>
+                            <sap.m:Column id="column0">
+                                <sap.m:header>
+                                    <sap.m:Text text="Cidade" id="text11_1654951002535"/>
+                                </sap.m:header>
+                            </sap.m:Column>
+                            <sap.m:Column id="column1">
+                                <sap.m:header>
+                                    <sap.m:Text text="País" id="text12_1654951027818"/>
+                                </sap.m:header>
+                            </sap.m:Column></sap.m:columns></sap.m:Table>
+                </content>
+                </SemanticPage>
+        </content>
+        <customHeader>
+            <Toolbar width="100%" id="toolbar3">
+            <content>
+                <Button xmlns="sap.m" text="{i18n>MenuOrdVenda}" id="button0" press="btnMenuListarOrdVenda"/>
+                <Button xmlns="sap.m" text="{i18n>MenuProduto}" id="button2" press="btnMenuListarProd"/>
+            </content>
+            </Toolbar>
+        </customHeader>
+        </Page>
+    </pages>
+</App>
+</mvc:View>

@@ -1,0 +1,139 @@
+<mvc:View 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+xmlns:fb="sap.ui.comp.filterbar" 
+controllerName="br.com.supri.fioriappsuprimentos199.controller.ListaProdutos"
+ displayBlock="true">
+<App id="_IDGenApp1">
+    <pages>     
+        <Page id="page" title="{i18n>title}">  
+        <content>
+            <SemanticPage xmlns="sap.f.semantic" showFooter="false" id="page0">
+                <titleHeading>
+                    <m:Title xmlns:m="sap.m" text="{i18n>TitleListaProdutos}" id="title0"/>
+                    
+                </titleHeading>
+                <headerContent>
+                    <m:Text xmlns:m="sap.m" text="Filtro" id="text6"/>
+						<fb:FilterBar id="filterbar" reset="onReset" search="onSearch" useToolbar="false" showGoOnFB="true">
+
+						<fb:filterGroupItems>
+
+						    <fb:FilterGroupItem xmlns:sap.m="sap.m" label="{i18n>lbIdProduto}" name="idProduto" labelTooltip="ID Produto" visibleInFilterBar="true" groupTitle="Principal" groupName="Principal" id="item0">
+
+						        <fb:control>
+
+						            <sap.m:Input width="100%" placeholder="{i18n>placeIdProduto}" id="idProdutoInput"/>
+
+						        </fb:control>
+
+						    </fb:FilterGroupItem>
+
+						   <!-- <fb:FilterGroupItem xmlns:sap.m="sap.m" label="{i18n>lbNomeProduto}" name="nomeProduto" labelTooltip="Nome Produto" visibleInFilterBar="true" groupTitle="Principal" groupName="Principal" id="item01">
+
+						        <fb:control>
+
+						            <sap.m:Input width="100%" placeholder="{i18n>placeNomeProduto}" id="nomeProdutoInput"/>
+
+						        </fb:control>
+
+						    </fb:FilterGroupItem>
+
+						    <fb:FilterGroupItem xmlns:sap.m="sap.m" label="{i18n>lbUndProduto}" name="undProduto" labelTooltip="Unidade Produto" visibleInFilterBar="true" groupTitle="Principal" groupName="Principal" id="item02">
+
+						        <fb:control>
+
+						            <sap.m:Input width="100%" placeholder="{i18n>placeUndProduto}" id="undProdutoInput"/>
+
+						        </fb:control>
+
+						    </fb:FilterGroupItem>-->
+
+						    <fb:FilterGroupItem xmlns:sap.m="sap.m" label="{i18n>lbCategdProduto}" name="categProduto" labelTooltip="Categoria Produto" visibleInFilterBar="true" groupTitle="Principal" groupName="Principal" id="item03">
+
+						        <fb:control>
+
+						            <sap.m:Input width="100%" placeholder="{i18n>placeCategProduto}" id="categProdutoInput"/>
+
+						        </fb:control>
+
+						    </fb:FilterGroupItem>
+
+						    <fb:FilterGroupItem xmlns:sap.m="sap.m" label="{i18n>lbForndProduto}" name="fornProduto" labelTooltip="FornecedorProduto" visibleInFilterBar="true" groupTitle="Principal" groupName="Principal" id="item04">
+
+						        <fb:control>
+
+						            <sap.m:Input width="100%" placeholder="{i18n>placeForndProduto}" id="fornProdutoInput"/>
+
+						        </fb:control>
+
+						    </fb:FilterGroupItem>
+
+						</fb:filterGroupItems>
+
+						</fb:FilterBar> 
+                </headerContent>
+                <titleMainAction>
+                    
+                    
+                </titleMainAction>
+                <titleCustomTextActions>
+                    
+                    
+                </titleCustomTextActions>
+                <titleCustomIconActions>
+            
+                    
+                </titleCustomIconActions>
+                <content>
+                    <sap.m:Table xmlns:sap.m="sap.m" growing="true" growingThreshold="10" growingScrollToLoad="true"  noDataText="{i18n>tbSemDados}" id="tableProdutos" items="{/product}">
+                        <sap.m:items><sap.m:ColumnListItem press="onSelectedItem" type="Active" id="item1">
+                                <sap.m:cells>
+                                    <sap.m:Text text="{Productid}" id="ProductID"/><Text xmlns="sap.m" text="{Name}" id="NameProduto"/>
+                                    <Text xmlns="sap.m" id="UndMedida" text="{Measureunit}"/>
+                                    <sap.m:Text text="{Category}" id="Category"/>
+                                    <Text xmlns="sap.m" text="{Supplierid}" id="FornecedorD"/>                                
+                                </sap.m:cells>
+                            </sap.m:ColumnListItem>
+                        </sap.m:items>
+                        <sap.m:columns>
+                            <sap.m:Column id="column3">
+                                <sap.m:header>
+                                    <sap.m:Label text=" {i18n>tbProdutoID}" id="produtoID"/>  
+                                </sap.m:header>
+                            </sap.m:Column>
+                            <sap.m:Column id="column5">
+                                <sap.m:header>
+                                    <sap.m:Label text="{i18n>tbNomeProduto}" id="nomeProduto"/>
+                                </sap.m:header>
+                            </sap.m:Column>
+                            <sap.m:Column id="column6">
+                                <sap.m:header>
+                                    <sap.m:Text text="{i18n>tbUndProduto}" id="undProduto"/>
+                                </sap.m:header>
+                            </sap.m:Column>
+                            <sap.m:Column id="column7">
+                                <sap.m:header>
+                                    <sap.m:Text text="{i18n>tbCatagoriaProduto}" id="catagoriaProduto"/>
+                                </sap.m:header>
+                            </sap.m:Column>
+                            <sap.m:Column id="column0">
+                                <sap.m:header>
+                                    <sap.m:Text text="{i18n>tbFornecedorProduto}" id="IDfornecedorProduto"/>
+                                </sap.m:header>
+                            </sap.m:Column></sap.m:columns></sap.m:Table>
+                </content>
+                </SemanticPage>
+        </content>
+        <customHeader>
+            <Toolbar width="100%" id="toolbar3">
+            <content>
+                <Button xmlns="sap.m" text="{i18n>MenuOrdVenda}" id="button0" press="btnMenuListarOrdVenda"/>
+                <Button xmlns="sap.m" text="{i18n>MenuFornecedor}" id="button2" press="btnMenuListarForn"/>
+            </content>
+            </Toolbar>
+        </customHeader>
+        </Page>
+    </pages>
+</App>
+</mvc:View>

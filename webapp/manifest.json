@@ -1,0 +1,216 @@
+{
+  "_version": "1.28.0",
+  "sap.app": {
+    "id": "br.com.supri.fioriappsuprimentos199",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap-ux/fiori-freestyle-writer:basic",
+      "version": "0.11.15",
+      "toolsId": "6967957a-83db-4400-bd4d-a7fa7a574270"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZSB_GERENSUPRIMENTOS_199/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.84.7",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "br.com.supri.fioriappsuprimentos199.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "br.com.supri.fioriappsuprimentos199.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteApp",
+          "pattern": "RouteApp",
+          "target": [
+            "TargetApp"
+          ]
+        },
+        {
+            "name": "ListaFornecedor",
+            "pattern": "listaFornecedor",
+            "target": [
+                "listaFornecedor"
+            ]
+        },
+        {
+            "name": "DetalheFornecedor",
+            "pattern": "detalheforn/{BusinessPartnerID}",
+            "target": [
+                "detalheFornecedor"
+            ]
+        },
+        {
+            "name": "ListaOrdensVendas",
+            "pattern": "",
+            "target": [
+                "listaordensvendas"
+            ]
+        },
+        {
+            "name": "DetalheOrdensVendas",
+            "pattern": "detalheOrdensVendas/{SalesOrderID}",
+            "target": [
+                "detalheordensvendas"
+            ]
+        },
+        {
+            "name": "ListaProdutos",
+            "pattern": "listaProdutos",
+            "target": [
+                "listaProdutos"
+            ]
+        },
+        {
+            "name": "DetalheProduto",
+            "pattern": "detalheproduto/{ProductID}",
+            "target": [
+                "detalheproduto"
+            ]
+        }
+      ],
+      "targets": {
+        "TargetApp": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "App",
+          "viewName": "App"
+        },
+        "listaFornecedor": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "listaFornecedor",
+            "viewName": "ListaFornecedor",
+            "controlId": "appID"
+        },
+        "detalheFornecedor": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "detalheFornecedor",
+            "viewName": "DetalheFornecedor",
+            "controlId": "appID"
+        },
+        "listaordensvendas": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "listaordensvendas",
+            "viewName": "ListaOrdensVendas",
+            "controlId": "appID"
+        },
+        "detalheordensvendas": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "detalheordensvendas",
+            "viewName": "DetalheOrdensVendas",
+            "controlId": "appID"
+        },
+        "listaProdutos": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "listaProdutos",
+            "viewName": "ListaProdutos",
+            "controlId": "appID"
+        }, 
+        "detalheproduto": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "detalheproduto",
+            "viewName": "DetalheProduto",
+            "controlId": "appID"
+        },
+        "notFound": {                    
+            "viewId": "notfound",
+            "viewName": "notFound",
+            "transition": "slide"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "br.com.supri.fioriappsuprimentos199.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}
